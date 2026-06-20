@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
+      data-i18n-content="meta.description"
       name="description"
       content="MEDIA PROMO marketing and advertising home page."
     />
-    <title>MEDIA PROMO</title>
+    <title data-i18n="meta.title">MEDIA PROMO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,29 +18,81 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="site-header" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="MEDIA PROMO home">
+    <header
+      class="site-header"
+      aria-label="Main navigation"
+      data-i18n-aria-label="header.aria"
+    >
+      <a
+        class="brand"
+        href="#home"
+        aria-label="MEDIA PROMO home"
+        data-i18n-aria-label="brand.aria"
+      >
         <span>MEDIA</span> <strong>PROMO</strong>
       </a>
 
-      <nav class="nav-links" aria-label="Primary">
-        <a class="active" href="#home">Home</a>
-        <button class="nav-button" type="button" data-scroll-target="contact">
-          Contact
-        </button>
-      </nav>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="Primary" data-i18n-aria-label="nav.aria">
+          <a class="active" href="#home" data-i18n="nav.home">Home</a>
+          <button
+            class="nav-button"
+            type="button"
+            data-scroll-target="contact"
+            data-i18n="nav.contact"
+          >
+            Contact
+          </button>
+        </nav>
+
+        <div
+          class="language-switch"
+          role="group"
+          aria-label="Website language"
+          data-i18n-aria-label="language.aria"
+        >
+          <button
+            class="language-option is-active"
+            type="button"
+            data-language="en"
+            aria-pressed="true"
+          >
+            EN
+          </button>
+          <button
+            class="language-option"
+            type="button"
+            data-language="az"
+            aria-pressed="false"
+          >
+            AZ
+          </button>
+        </div>
+      </div>
     </header>
 
     <main id="home">
-      <section class="hero" aria-label="MEDIA PROMO introduction">
+      <section
+        class="hero"
+        aria-label="MEDIA PROMO introduction"
+        data-i18n-aria-label="hero.aria"
+      >
         <div class="hero-content">
-          <h1>Grow Your Brand With <span>MEDIA PROMO</span></h1>
-          <p>
+          <h1>
+            <span class="hero-title-lead" data-i18n="hero.titleLead">Grow Your Brand With</span>
+            <span class="hero-title-accent" data-i18n="hero.titleAccent">MEDIA PROMO</span>
+          </h1>
+          <p data-i18n="hero.copy">
             Innovative marketing, advertising, media planning, and digital
             promotion solutions designed to help businesses achieve measurable
             growth.
           </p>
-          <button class="primary-button" type="button" data-scroll-target="contact">
+          <button
+            class="primary-button"
+            type="button"
+            data-scroll-target="contact"
+            data-i18n="hero.cta"
+          >
             Get Started
           </button>
         </div>
@@ -48,14 +101,14 @@
       <section class="about-section" aria-labelledby="about-title">
         <div class="section-grid">
           <div class="about-copy">
-            <p class="eyebrow">About MEDIA PROMO</p>
-            <h2 id="about-title">About MEDIA PROMO</h2>
-            <p>
+            <p class="eyebrow" data-i18n="about.eyebrow">About MEDIA PROMO</p>
+            <h2 id="about-title" data-i18n="about.title">About MEDIA PROMO</h2>
+            <p data-i18n="about.copyOne">
               MEDIA PROMO is a modern marketing and advertising company
               providing comprehensive brand development, digital marketing,
               media planning, and promotional solutions.
             </p>
-            <p>
+            <p data-i18n="about.copyTwo">
               Our mission is to help businesses strengthen their market
               presence, attract new customers, and achieve sustainable growth
               through innovative marketing strategies.
@@ -66,13 +119,14 @@
             class="about-image"
             src="./assets/meeting.jpg"
             alt="Marketing team discussing a campaign around a conference table"
+            data-i18n-alt="about.imageAlt"
           />
         </div>
       </section>
 
       <section class="services-section" aria-labelledby="services-title">
         <div class="section-heading">
-          <h2 id="services-title">Our Services</h2>
+          <h2 id="services-title" data-i18n="services.title">Our Services</h2>
         </div>
 
         <div class="services-grid">
@@ -87,8 +141,8 @@
               </svg>
             </span>
             <div>
-              <h3>Digital Marketing</h3>
-              <p>
+              <h3 data-i18n="services.digital.title">Digital Marketing</h3>
+              <p data-i18n="services.digital.copy">
                 SEO, PPC advertising, social media management, and digital
                 campaign optimization.
               </p>
@@ -104,8 +158,8 @@
               </svg>
             </span>
             <div>
-              <h3>Brand Promotion</h3>
-              <p>
+              <h3 data-i18n="services.brand.title">Brand Promotion</h3>
+              <p data-i18n="services.brand.copy">
                 Strategic branding solutions to strengthen visibility,
                 awareness, and customer loyalty.
               </p>
@@ -122,8 +176,8 @@
               </svg>
             </span>
             <div>
-              <h3>Media Planning</h3>
-              <p>
+              <h3 data-i18n="services.media.title">Media Planning</h3>
+              <p data-i18n="services.media.copy">
                 Effective media placement strategies maximizing reach and
                 return on investment.
               </p>
@@ -132,7 +186,11 @@
         </div>
       </section>
 
-      <section class="stats-section" aria-label="Company highlights">
+      <section
+        class="stats-section"
+        aria-label="Company highlights"
+        data-i18n-aria-label="stats.aria"
+      >
         <div class="stats-grid">
           <div class="stat-item">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -142,7 +200,7 @@
             </svg>
             <div>
               <strong>500+</strong>
-              <span>Projects</span>
+              <span data-i18n="stats.projects">Projects</span>
             </div>
           </div>
 
@@ -157,7 +215,7 @@
             </svg>
             <div>
               <strong>200+</strong>
-              <span>Clients</span>
+              <span data-i18n="stats.clients">Clients</span>
             </div>
           </div>
 
@@ -171,7 +229,7 @@
             </svg>
             <div>
               <strong>15+</strong>
-              <span>Years Experience</span>
+              <span data-i18n="stats.experience">Years Experience</span>
             </div>
           </div>
 
@@ -184,7 +242,7 @@
             </svg>
             <div>
               <strong>98%</strong>
-              <span>Client Satisfaction</span>
+              <span data-i18n="stats.satisfaction">Client Satisfaction</span>
             </div>
           </div>
         </div>
@@ -192,7 +250,7 @@
 
       <section class="portfolio-section" aria-labelledby="portfolio-title">
         <div class="section-heading">
-          <h2 id="portfolio-title">Portfolio</h2>
+          <h2 id="portfolio-title" data-i18n="portfolio.title">Portfolio</h2>
         </div>
 
         <div class="portfolio-grid">
@@ -200,10 +258,11 @@
             <img
               src="./assets/portfolio-outdoor.jpg"
               alt="Outdoor digital billboards in a city"
+              data-i18n-alt="portfolio.outdoor.alt"
             />
             <div class="portfolio-caption">
-              <h3>Outdoor Advertising</h3>
-              <p>City-scale campaigns built for attention.</p>
+              <h3 data-i18n="portfolio.outdoor.title">Outdoor Advertising</h3>
+              <p data-i18n="portfolio.outdoor.copy">City-scale campaigns built for attention.</p>
             </div>
           </article>
 
@@ -211,10 +270,11 @@
             <img
               src="./assets/portfolio-social.jpg"
               alt="Social media engagement icons above a laptop"
+              data-i18n-alt="portfolio.social.alt"
             />
             <div class="portfolio-caption">
-              <h3>Social Campaigns</h3>
-              <p>Content systems that move audiences.</p>
+              <h3 data-i18n="portfolio.social.title">Social Campaigns</h3>
+              <p data-i18n="portfolio.social.copy">Content systems that move audiences.</p>
             </div>
           </article>
 
@@ -222,10 +282,11 @@
             <img
               src="./assets/portfolio-brand.jpg"
               alt="Premium product branding concept"
+              data-i18n-alt="portfolio.brand.alt"
             />
             <div class="portfolio-caption">
-              <h3>Brand Excellence</h3>
-              <p>Visual identities with market presence.</p>
+              <h3 data-i18n="portfolio.brand.title">Brand Excellence</h3>
+              <p data-i18n="portfolio.brand.copy">Visual identities with market presence.</p>
             </div>
           </article>
         </div>
@@ -234,17 +295,17 @@
       <section id="contact" class="contact-section" aria-labelledby="contact-title">
         <div class="contact-wrap">
           <div>
-            <p class="eyebrow">Contact MEDIA PROMO</p>
-            <h2 id="contact-title">Let's grow your brand</h2>
-            <p>
+            <p class="eyebrow" data-i18n="contact.eyebrow">Contact MEDIA PROMO</p>
+            <h2 id="contact-title" data-i18n="contact.title">Let's grow your brand</h2>
+            <p data-i18n="contact.copy">
               Reach the team for campaign planning, advertising, and digital
               promotion inquiries.
             </p>
           </div>
 
           <address class="contact-details">
-            <a href="tel:+15552040198">+1 (555) 204-0198</a>
-            <a href="mailto:contact@mediapromo.com">contact@mediapromo.com</a>
+            <a href="mailto:info@mediapromo.az">info@mediapromo.az</a>
+            <a href="tel:+994552030274">+994552030274</a>
           </address>
         </div>
       </section>
